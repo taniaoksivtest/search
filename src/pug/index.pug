@@ -1,0 +1,71 @@
+extends common/layout.pug
+block headScripts
+  link(rel="stylesheet", type="text/css", href="./css/index.css")
+
+block header
+  include common/header
+block content
+  main.main
+    form.find
+      div.find-block
+        div.find-in
+          div.find-in-box.autocomplete
+            label.find-in__text Куда
+            div.find-in__select-box
+              input.find-in__input#country-input(type="text" name="myCountry" placeholder="Страна")
+          div.find-in-part
+            div.find-in-box
+              label.find-in__text Дата начала тура
+              div.find-in__multi-cont
+                div.find-in__multi-cont__box
+                  input.find-in__input.date-input#date-picker.form-control.date-picker(type="text" name="daterange" placeholder="" )
+                div.find-in__multi-cont__box
+                  input.find-in__input.date-input.form-control.date-picker-2(type="text" name="daterange" placeholder="" )
+            div.find-in-box
+              label.find-in__text Проезд
+              div.find-in__select-box
+                select.find-in__select
+                  option.find-in__option(selected) Включен
+                  option.find-in__option Не включен
+
+
+                //- img.find-in__select-icon(src="../img/down-arrow-black.svg", alt="arrow")
+        div.find-out
+          div.find-out-box
+            label.find-out__text Откуда
+            div.find-out__select-box
+              select.find-out__select
+                option.find-out__option(selected) Киев
+                option.find-out__option Харьков
+              //- img.find-out__select-icon(src="../img/down-arrow-black.svg", alt="arrow")
+          div.find-out-box
+            button.find-out__button(type='submit') Найти
+          div.find-out-more
+            span.find-out-more__text Больше параметров поиска
+            img.find-out-more__img(src="../img/down-arrow-black.svg", alt="arrow")
+      div.find-more-container
+        div.find-more
+          div.find-more-box
+            label.find-more__text Питание
+            div.find-more__select-box
+              select.find-more__select
+                option.find-more__option(selected) Al
+                option.find-more__option Харьков
+              //- img.find-more__select-icon(src="../img/down-arrow-black.svg", alt="arrow")
+          div.find-more-box
+            label.find-more__text Отель
+            div.find-more__select-box
+              select.find-more__select
+                option.find-more__option(selected) 5
+                option.find-more__option 4
+                option.find-more__option 3
+                option.find-more__option 2
+                option.find-more__option 1
+              //- img.find-more__select-icon(src="../img/down-arrow-black.svg", alt="arrow")
+          div.find-more-box
+            label.find-more__text Номер
+            div.find-more__select-box
+              select.find-more__select
+                option.find-more__option(selected) DBL
+                option.find-more__option DBL
+              //- img.find-more__select-icon(src="../img/down-arrow-black.svg", alt="arrow")

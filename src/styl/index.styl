@@ -1,0 +1,193 @@
+@import'/common/variables.styl'
+@import'/utils/reset.styl'
+@import '/common/header.styl'
+global-reset()
+
+body
+  min-width 320px
+  font-family 'Open Sans', sans-serif
+  background url('http://daler.ru/pictures/1/2560x1600/Kafe-nad-morem-12103.jpg')
+  background-size cover
+  background-repeat no-repeat
+  min-height 100vh
+.main-container
+  width 100%
+.main
+  width 100%
+  background-color $color-back
+.find
+  display block
+  width 100%
+  height 100%
+.find-block
+  display flex
+  width 100%
+  justify-content space-between
+  padding 20px
+  box-sizing border-box
+  padding-top 10px
+.find-in
+  margin-right 20px
+  width 100%
+  max-width 70%
+.find-out
+  width 100%
+  max-width 250px
+.find-in__multi-cont
+  display flex
+.find-in__multi-cont__box
+  width 100%
+  border-radius 3px
+  background url('../img/calendar.svg') #fff
+  background-size 15px
+  background-repeat no-repeat
+  background-position calc(100% - 10px) 12px
+  position relative
+  height 40px
+  &:first-child:after
+    content "-"
+    top 8px
+    right 0
+    z-index 2
+    position absolute
+    display none
+.find-in__multi-cont .find-in__multi-cont__box:first-child .date-input
+  border-right none !important
+  border-radius 3px 0 0 3px
+  background-color rgba(255,255,255, .004)
+.find-in__multi-cont .find-in__multi-cont__box:last-child .date-input
+  border-left none !important
+  border-radius 0 3px 3px 0
+  background-color rgba(255,255,255, .004)
+.find-in-box:first-child
+  margin-right 20px
+.find-in-part
+  display flex
+.find-in__text,.find-out__text,.find-more__text,.find-in-box
+  display block
+  width 100%
+.find-in__input, .find-in__select-box, .find-out__select, .find-more__select, .find-in__select,find-in__select-box
+  width 100%
+  display block
+  height 40px
+.find-in__input,  .find-out__select, .find-more__select, .find-in__select
+  box-sizing border-box
+  border-radius 3px
+  border 1px solid $color-border !important
+  padding 7px 10px !important
+  background-color rgba(255,255,255,.003)
+  appearance none
+  outline none
+  height 100%
+  &:focus
+    border 1px solid $color-border
+.date-input
+  padding 7px 10px !important
+  background-color #fff
+.find-out__select-box, .find-in__select-box, .find-more__select-box
+  background url('../img/down-arrow-black.svg') #fff
+  background-size 12px
+  background-repeat no-repeat
+  background-position calc(100% - 10px) 14px
+  border-radius 3px
+.find-in__text, .find-out__text, .find-more__text
+  text-transform uppercase
+  font-weight 600
+  color $color-label
+  margin-top 10px
+  margin-bottom 5px
+.find-in__input::placeholder
+  font-style italic
+  color #ccc
+.find-out-more
+  width 100%
+  display flex
+  align-items center
+  justify-content center
+  margin auto
+  margin-top 10px
+  margin-bottom 5px
+  width fit-content
+  cursor pointer
+.find-out-more__img
+  display block
+  height 12px
+  margin-left 5px
+  margin-top 5px
+.find-out-more__text
+  color $color-span
+  font-weight 600
+  font-size 0.8em
+.find-out__button
+  width 100%
+  display block
+  border none
+  outline none
+  padding 12px
+  box-sizing border-box
+  text-transform uppercase
+  font-weight 600
+  border-radius 3px
+  color #fff
+  letter-spacing 0.07em
+  margin-top 30px
+  background-color $color-btn
+  cursor pointer
+  transition background-color 0.3s
+  font-family 'Open Sans', sans-serif
+  &:hover
+    background-color darken($color-btn, 20%)
+.find-more-container
+  display none
+  padding 20px
+  box-sizing border-box
+  padding-top 0
+.find-more
+  border-top 1px solid $color-border
+  display flex
+.find-more-box
+  width 100%
+  margin-right 20px
+  &:last-child
+    margin-right 0
+.autocomplete
+  position relative
+.autocomplete-items
+  position absolute
+  border 1px solid $color-border
+  border-bottom none
+  border-top none
+  z-index 99
+  top 100%
+  left 0
+  right 0
+  background-color #fff
+.autocomplete-list__item
+  padding 10px
+  cursor pointer
+  background-color #fff
+  border-bottom 1px solid $color-border
+@media(max-width 660px)
+  .autocomplete-list__item
+    font-size 0.8em
+  .find-more
+    flex-direction column
+  .find-in__text, .find-out__text, .find-more__text
+    font-size 0.8em
+  .date-input, .find-in__input,  .find-out__select, .find-more__select, .find-in__select
+    font-size 0.8em !important
+  .find-in__input, .find-in__select-box, .find-out__select, .find-more__select, .find-in__select,find-in__select-box
+    height 35px
+  .find-in__multi-cont__box:first-child:after
+    display block
+    top 4px
+  .find-in__multi-cont__box
+    height 35px
+    background-position calc(100%-10px) 5px
+  .find-in, .find-out
+    max-width 100%
+  .find-block
+    flex-direction column
+  .find-out__select-box, .find-in__select-box, .find-more__select-box
+    background-position calc(100%-10px) 12px
+    

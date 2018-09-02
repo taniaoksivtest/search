@@ -1,0 +1,104 @@
+.wrapper
+  max-width $one
+  margin auto
+  box-shadow 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+.header
+  width 100%
+.header-container
+  width 100%
+  display flex
+  justify-content space-between
+  height 40px
+  background-color $color-nav
+.header-container-box
+  display flex
+.header-list, .options-list
+  height 100%
+  display flex
+.header-list__item,.options-list__item
+  display block
+  height 100%
+.options-list__item-link, .header-list__item-link, .header-nav__span
+  display flex
+  align-items center
+  height 100%
+  text-transform uppercase
+  font-size 0.8em
+  color #fff !important
+  line-height 40px
+  padding 0 20px
+  text-decoration none !important
+  transition background-color 0.3s
+  font-weight 600
+  box-sizing border-box
+  &:hover
+    background-color lighten($color-nav,20%)
+    .options-list__item-img
+      opacity 1
+.options-list__item-img
+  display block
+  width 20px
+  opacity 0.6
+  margin-right 5px
+  transition opacity 0.3s
+.header-button__icon
+  width 20px
+  display block
+.header-button
+  height 100%
+  align-items center
+  cursor pointer
+  box-sizing border-box
+  padding 0 10px
+  display none
+.header-nav__span
+  display none
+.header-container-nav-visible
+  display block !important
+.header-list__item-link-active
+  background-color lighten($color-nav,20%)
+.oprion-list__item-link-enter
+  background-color $color-dark
+  &:hover
+    background-color lighten($color-dark,10%)
+@media(max-width 800px)    
+  .header-button
+    display flex
+    background-color lighten($color-nav,20%)
+    margin-left 2px
+  .header-container-nav
+    display none
+    position absolute
+    top 40px
+    left 0
+    background-color $color-nav
+    height auto
+    width 100%
+    z-index 10
+  .header-list
+    flex-direction column
+  .header-container-box
+    position relative
+    min-width 232px
+  .header-nav__span
+    display flex
+  .header-list__item-link-active
+    display none
+  .header-nav__span
+    width 100%
+    background-color lighten($color-nav,20%)
+  .options-list__item:first-child
+    .options-list__item-link
+      background-color lighten($color-nav,20%)
+    .options-list__item-img
+      margin-right 0
+      opacity 1
+@media(max-width 800px)    
+  .options-list__item-text-hidden
+    display none
+  .options-list__item-link, .header-list__item-link, .header-nav__span
+    font-size 0.7em
+    padding 0 10px
+  .header-container-box
+    min-width 195px
+  
