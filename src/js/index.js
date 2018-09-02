@@ -81,7 +81,6 @@ $(document).ready(function() {
     $('.header-list__item-link').removeClass('header-list__item-link-active');
     $(this).addClass('header-list__item-link-active');
     $('.header-nav__span').text($(this).text())
-    $('.header-container-nav').slideUp();
   })
   $('.find-out-more').click(function() {
     $('.find-more-container').slideToggle();

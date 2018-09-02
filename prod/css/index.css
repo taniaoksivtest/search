@@ -264,7 +264,7 @@ body {
   box-sizing: border-box;
   border-radius: 3px;
   border: 1px solid #aaa !important;
-  padding: 7px 10px !important;
+  padding: 6px 10px !important;
   background-color: rgba(255,255,255,0.003);
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -276,7 +276,7 @@ body {
   border: 1px solid #aaa;
 }
 .date-input {
-  padding: 7px 10px !important;
+  padding: 6px 10px !important;
   background-color: #fff;
 }
 .find-out__select-box, .find-in__select-box, .find-more__select-box {
@@ -410,11 +410,11 @@ body {
   }
   .find-in__multi-cont__box:first-child:after {
     display: block;
-    top: 10px;
+    top: 4px;
   }
   .find-in__multi-cont__box {
     height: 35px;
-    background-position: calc(100%-10px) 5px;
+    background-position: calc(100% - 10px) 9px !important;
   }
   .find-in, .find-out {
     max-width: 100%;
@@ -424,6 +424,6 @@ body {
         flex-direction: column;
   }
   .find-out__select-box, .find-in__select-box, .find-more__select-box {
-    background-position: calc(100%-10px) 12px;
+    background-position: calc(100% -10px) 12px;
   }
 }
